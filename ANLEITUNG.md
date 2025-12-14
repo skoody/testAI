@@ -42,14 +42,23 @@ sudo usermod -aG video $USER
 
 ### Schritt 3: Python-Umgebung und Abhängigkeiten einrichten
 
+**WICHTIG: Überprüfen Sie Ihre Python-Version!**
+Bevor Sie fortfahren, stellen Sie sicher, dass Sie eine kompatible Python-Version verwenden. Die benötigten KI-Bibliotheken sind für Python **3.9, 3.10, 3.11 oder 3.12** verfügbar.
+
+Überprüfen Sie Ihre Standardversion mit:
+`python --version`
+
+Wenn Sie eine andere Version haben, müssen Sie eine der kompatiblen Versionen explizit verwenden. Wir empfehlen **Python 3.11**. Sie können es mit `pacman` installieren, falls es nicht bereits vorhanden ist:
+`sudo pacman -S --noconfirm python311`
+
 1.  **Wechseln Sie in das neue Verzeichnis:**
     ```bash
     cd Retrieval-based-Voice-Conversion-WebUI
     ```
 
-2.  **Erstellen Sie eine virtuelle Python-Umgebung (empfohlen):**
+2.  **Erstellen Sie eine virtuelle Python-Umgebung (empfohlen) mit einer kompatiblen Python-Version:**
     ```bash
-    python -m venv venv
+    python3.11 -m venv venv
     source venv/bin/activate
     ```
 
